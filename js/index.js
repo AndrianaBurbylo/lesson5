@@ -8,16 +8,13 @@ document.write(result);
 function solveQE(a, b, c){
     const d = calcD(a, b, c);
     if (d>0){
-        const x1 = (-b + Math.sqrt(d))/2*a;
-        const x2 = (-b - Math.sqrt(d))/2*a;
+        const x1 = (-b + Math.sqrt(d))/(2*a);
+        const x2 = (-b - Math.sqrt(d))/(2*a);
         return 'x1 = ' + x1 + ', x2 = ' + x2;
-    }
-    else if (d<0) {
+    } else if (d<0) {
         return 'no solutions';
     }
-    else {
-        return 'x = ' + (-b/2*a);
-    }
+    return 'x = ' + (-b/(2*a));
 }
 
 function calcD(a, b, c){
